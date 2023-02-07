@@ -1,0 +1,187 @@
+{
+  "New Tsx": {
+    "prefix": [
+      "~tsx",
+      "!tsx"
+    ],
+    "body": [
+      "import React from \"react\";",
+      "import { PropsWithChildren } from \"react\";",
+      "interface I${1:Component}Props {  }",
+      "",
+      "export const ${1:Component}: React.FC<PropsWithChildren<I${1:Component}Props>> = (props) => {",
+      "",
+      "  return (",
+      "    <${2:div}>",
+      "    ",
+      "    </${2:div}>",
+      "  )",
+      "}",
+      ""
+    ],
+    "description": "Create a new Component"
+  },
+  "Add TSX": {
+    "prefix": [
+      "~atsx",
+      "!atsx"
+    ],
+    "body": [
+      "const ${1:Component}: React.FC<PropsWithChildren<{}>> = (props) => {",
+      "",
+      "  return (",
+      "    <${2|div,section,article|}>",
+      "    ",
+      "    </${2}>",
+      "  )",
+      "}"
+    ],
+    "description": "Add a new Component"
+  },
+  "New Icon": {
+    "prefix": [
+      "~icon",
+      "!icon"
+    ],
+    "body": [
+      "import { IIconSVGProps } from \"../../types/common\";",
+      "",
+      "export const ${1:Component}Icon: React.FC<IIconSVGProps> = props => (",
+      "  ${2}",
+      ")"
+    ],
+    "description": "Create icon"
+  },
+  "Add icon": {
+    "prefix": [
+      "~aicon",
+      "!aicon"
+    ],
+    "body": [
+      "export const ${1:Component}Icon: React.FC<IIconSVGProps> = props => (",
+      "  ${2}",
+      ")"
+    ],
+    "description": "Add icon"
+  },
+  "Add Slices": {
+    "prefix": [
+      "~slice",
+      "!slice"
+    ],
+    "body": [
+      "import { createSlice, PayloadAction } from \"@reduxjs/toolkit\";",
+      "",
+      "interface I${1}State {",
+      "  ",
+      "};",
+      "",
+      "const initialState: I${1}State = {",
+      "  ",
+      "};",
+      "",
+      "export const ${2}Slice = createSlice({",
+      "  name: \"${2}\",",
+      "  initialState,",
+      "  reducers: {",
+      "    ",
+      "  },",
+      "});",
+      "",
+      "// Actions",
+      "export const {} = ${2}Slice.actions;",
+      "",
+      "export default ${2}Slice.reducer;"
+    ]
+  },
+  "Add reducer": {
+    "prefix": [
+      "~areducer",
+      "!areducer"
+    ],
+    "body": [
+      "${1}: (state, action: PayloadAction<${2}>) => {",
+      "  ${3}",
+      "},"
+    ]
+  },
+  "Create storybook": {
+    "prefix": [
+      "!sb",
+      "~sb"
+    ],
+    "body": [
+      "import { ComponentMeta, ComponentStory } from \"@storybook/react\";",
+      "import { codePreview } from \"./utils\";",
+      "import { ${1} } from \"../components/${1}\";",
+      "",
+      "export default {",
+      "  component: ${1},",
+      "} as ComponentMeta<typeof ${1}>;",
+      "",
+      "export const ${1}Demo: ComponentStory<typeof ${1}> = (args) => {",
+      "  return <${1} {...args} />;",
+      "};",
+      "${1}Demo.args = {",
+      "};",
+      "${1}Demo.parameters = {",
+      "  preview: codePreview`",
+      "...",
+      "return (",
+      "  ...",
+      "  <${1} ",
+      "  />",
+      "  ...",
+      ")",
+      "  `,",
+      "};"
+    ]
+  },
+  "Add storybook": {
+    "prefix": [
+      "!asb",
+      "~asb"
+    ],
+    "body": [
+      "",
+      "export const ${1}Demo: ComponentStory<typeof ${1}> = (args) => {",
+      "  return <${1} {...args} />;",
+      "};",
+      "${1}Demo.args = {",
+      "};",
+      "${1}Demo.parameters = {",
+      "  preview: codePreview`",
+      "...",
+      "return (",
+      "  ...",
+      "  <${1} ",
+      "  />",
+      "  ...",
+      ")",
+      "  `,",
+      "};"
+    ]
+  },
+  "Form": {
+    "prefix": [
+      "!form"
+    ],
+    "body": [
+      "<FormikForm",
+      "  initValues={{",
+      "    ",
+      "  }}",
+      "  yupSchema={(yup) => ({",
+      "    ",
+      "  })}",
+      "  onSubmit={handleSubmit}",
+      ">",
+      "  {({ fieldProps }) => (",
+      "    <>",
+      "      ",
+      "    </>",
+      "  )}",
+      "</FormikForm>"
+    ]
+  }
+}

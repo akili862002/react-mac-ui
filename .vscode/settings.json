@@ -1,0 +1,38 @@
+{
+  "cSpell.words": [
+    "deepmerge",
+    "flowbite",
+    "Formik",
+    "headlessui",
+    "tailwindcss"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    "node_modules": true
+  },
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "inputClassName",
+    "enter",
+    "enterFrom",
+    "enterTo",
+    "leave",
+    "leaveFrom",
+    "leaveTo",
+    "shadowClassName",
+    "itemClassName",
+    "panelClassName"
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    "cn\\(([^\\)]*)" // cn("...")
+  ],
+  "search.exclude": {
+    "**/node_modules": true,
+    "dist": true,
+    "storybook-static": true,
+    "**/bower_components": true,
+    "**/*.code-search": true
+  }
+}

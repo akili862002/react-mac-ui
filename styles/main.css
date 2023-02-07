@@ -1,0 +1,148 @@
+/* Custom tailwind --------------------------------------------------------------------------------------------------------------- */
+
+[type="radio"] {
+  @apply appearance-none cursor-pointer icon-tn focus:outline-none;
+  @apply text-gray-700 bg-gray-100 border border-gray-300 rounded-full;
+  @apply focus:ring-gray-700 focus:ring-2 ring-offset-2;
+}
+[type="radio"]:checked {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-color: transparent;
+}
+
+[type="checkbox"] {
+  @apply w-[17px] h-[17px] bg-gray-100 border border-gray-300 rounded-md appearance-none cursor-pointer;
+  @apply focus:ring-gray-700 focus:ring-2 ring-offset-2 focus:border-transparent;
+  @apply checked:bg-gray-700 checked:border-gray-700;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Custom react-nice-dates */
+/* Remind import build css */
+/* @import "~react-nice-dates/build/style.css"; */
+.nice-dates {
+  @apply relative;
+}
+
+.nice-dates-popover {
+  @apply !max-w-30;
+}
+
+.nice-dates-day.-selected::before {
+  @apply bg-gray-700 rounded-lg;
+}
+
+.nice-dates-day::after {
+  @apply !bg-gray-100 !border-none !rounded-lg;
+}
+
+.nice-dates-popover.-open {
+  @apply !rounded-lg !shadow-md;
+}
+
+/* React image crop */
+/* @import "~react-image-crop/dist/ReactCrop.css"; */
+
+.ReactCrop__drag-handle::after {
+  @apply !bg-gray-500 rounded-full !outline-none !border-none;
+}
+
+.ReactCrop__crop-selection {
+  @apply !border-2 !border-solid !border-gray-500;
+}
+
+/* Spinner */
+.spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.spinner .path {
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+/* Richtext */
+.rich-text {
+  @apply text-gray-900;
+}
+
+.rich-text {
+  @apply font-normal text-md;
+  line-height: 1.5;
+}
+
+.rich-text h1 {
+  @apply mb-[4px] text-4xl font-bold;
+  line-height: 1.2;
+}
+
+.rich-text [data-editor] {
+  @apply mb-1;
+}
+
+.rich-text h2 {
+  @apply text-3xl font-semibold;
+  line-height: 1.3;
+}
+
+.rich-text h3 {
+  @apply text-xl font-semibold;
+  line-height: 1.3;
+}
+
+.rich-text ul {
+  @apply pl-2 list-disc;
+}
+
+.rich-text ol {
+  @apply pl-2 list-decimal;
+}
+
+.rich-text a {
+  @apply text-gray-500 hover:underline;
+}
+
+.rich-text .text-left {
+  text-align: left;
+}
+
+.rich-text .text-center {
+  text-align: center;
+}
+.rich-text .text-right {
+  text-align: right;
+}
