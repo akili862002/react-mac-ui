@@ -9,6 +9,6 @@ git push -f origin dist-sb
 echo ""
 echo "------------------------------------------------"
 echo "  [✅] Wala, deployed storybook successfully!"
-echo "  [Deployed] 
+echo "  [Deployed] https://react-mac-ui.netlify.app/"
 echo "------------------------------------------------"
 cd ..

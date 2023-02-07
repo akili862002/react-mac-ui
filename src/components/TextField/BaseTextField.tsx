@@ -17,12 +17,12 @@ import { isFunction } from "formik";
 import React from "react";
 import { cnx } from "../../utils/classnames.utils";
 
-type IInputProps = DetailedHTMLProps<
+export type IInputProps = DetailedHTMLProps<
   InputHTMLAttributes<HTMLInputElement>,
   HTMLInputElement
 >;
 
-type IBaseTextFieldChildrenArgs = {
+export type IBaseTextFieldChildrenArgs = {
   isError?: boolean;
 };
 

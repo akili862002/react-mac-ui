@@ -61,9 +61,7 @@ export const AlertDialog: React.FC = (props) => {
         <div>{payload.message}</div>
       </Dialog.Content>
       <Dialog.Buttons>
-        <Button className="w-full" onClick={handleConfirm}>
-          Tôi hiểu rồi
-        </Button>
+        <Button onClick={handleConfirm}>Ok, I got it</Button>
       </Dialog.Buttons>
     </Dialog>
   );

@@ -3,15 +3,13 @@
   "description": "react-mac-ui is a component library for React that replicates the classic macOS design. It offers a wide range of UI components with a modern and clean look to enhance the aesthetic of your project",
   "author": "Dung Nguyen",
   "license": "MIT",
-  "private": true,
+  "private": false,
+  "repository": "https://github.com/akili862002/react-mac-ui",
   "main": "index.js",
   "typings": "index.d.ts",
-  "files": [
-    "index.js",
-    "config.js",
-    "README.md",
-    "LICENSE"
-  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "1.0.0",
   "scripts": {
     "clean-dist": "rm -rf dist",
